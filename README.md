@@ -42,6 +42,9 @@ cart/
 data/
 view/
 widgets/
+
+
+root.dart
 main.dart
 
 

@@ -31,7 +31,7 @@ class _CustomTextformfieldState extends State<CustomTextformfield> {
             _obsecureText =! _obsecureText;
           });
         },
-        child: Icon(CupertinoIcons.eye)):null,
+        child: Icon(CupertinoIcons.eye,size:27 ,)):null,
       enabledBorder: OutlineInputBorder(
         borderSide: BorderSide(color: Colors.black,width: 1.5),
         borderRadius: BorderRadius.circular(12),

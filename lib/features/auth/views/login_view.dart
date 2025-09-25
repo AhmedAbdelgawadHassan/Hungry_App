@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:hungry/core/constants/app_colors.dart';
+import 'package:hungry/features/auth/views/signup_view.dart';
+import 'package:hungry/features/auth/widgets/customAuthButton.dart';
 import 'package:hungry/shared/custom_text.dart';
 import 'package:hungry/shared/custom_textformfield.dart';
 
@@ -52,28 +54,12 @@ class LoginView extends StatelessWidget {
                       ispassword: true,
                     ),
                     Gap(65),
-                    GestureDetector(
-                      onTap: () {
-                        if (_formkey.currentState!.validate()) {
-                          print('success');
-                        }
-                      },
-                      child: Container(
-                        alignment: Alignment.center,
-                        width: double.infinity,
-                        height: 50,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: CustomText(
-                          text: 'Login',
-                          color: AppColors.primaryColor,
-                          fontSize: 20,
-                          fontWeight: FontWeight.w800,
-                        ),
-                      ),
-                    ),
+                  Customauthbutton(ontap: (){ if (_formkey.currentState!.validate()) {
+                          Navigator.push(context, MaterialPageRoute(
+                            builder: (context){
+                              return SignupView();
+                            }));
+                        }}, text: 'Login')
                   ],
                 ),
               ),

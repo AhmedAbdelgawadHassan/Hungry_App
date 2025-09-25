@@ -1,16 +1,48 @@
 # hungry
 
-A new Flutter project.
 
-## Getting Started
+# files Structure 
+lib/
 
-This project is a starting point for a Flutter application.
+core/
 
-A few resources to get you started if this is your first Flutter project:
+constants/
+api_endpoints.dart
+app_colors.dart
+app_strings.dart
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+network/
+api_service.dart
+api_exceptions.dart
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+utils/
+helpers.dart
+validator.dart
+
+
+
+
+features/
+food/
+data/
+food_model.dart
+food_repositiry.dart
+
+view/
+food_list_view.dart
+food_details.dart
+
+
+
+widgets/
+food_card.dart
+
+another features
+cart/
+data/
+view/
+widgets/
+main.dart
+
+
+every feature contains 3 folder (data-views-widgets)

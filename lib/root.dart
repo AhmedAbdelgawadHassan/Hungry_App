@@ -37,6 +37,7 @@ class _RootState extends State<Root> {
 body: PageView(
   controller: controller,
   children: screens,
+  physics: NeverScrollableScrollPhysics(),  //never scroll by 
 ),
 bottomNavigationBar: Container(
   decoration: BoxDecoration(
@@ -53,11 +54,16 @@ bottomNavigationBar: Container(
       });
     },
     elevation: 0,
-    backgroundColor:Colors.transparent,
+    backgroundColor: AppColors.primaryColor,
     type: BottomNavigationBarType.fixed,
     currentIndex: currentscreen,
+    iconSize: 22,
+    unselectedFontSize: 12,
+    selectedFontSize: 15,
+    selectedIconTheme: IconThemeData(size: 26),
     selectedItemColor: Colors.white,
-    unselectedItemColor: Colors.grey.shade700,
+    unselectedItemColor: Colors.grey.shade500,
+    selectedLabelStyle: TextStyle(fontWeight: FontWeight.bold),
     items: [
     BottomNavigationBarItem(icon: Icon(CupertinoIcons.home),label: 'Home'),
      BottomNavigationBarItem(icon: Icon(CupertinoIcons.clock),label: 'Orders'),

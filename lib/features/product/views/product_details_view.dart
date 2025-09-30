@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:hungry/features/product/widgets/spicy_slider.dart';
 import 'package:hungry/features/product/widgets/topping_card.dart';
+import 'package:hungry/shared/customButton.dart';
 import 'package:hungry/shared/custom_text.dart';
 
 
@@ -25,8 +26,9 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
         }, icon: Icon(Icons.arrow_back)),
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
         child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -77,7 +79,25 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
                    );
                 },),
              ),
-             
+
+            Row(
+              children: [
+                Column(
+                  children: [
+                    CustomText(text: "Total",fontSize: 18,color: Color(0xff3B2E2E),),
+                    CustomText(text: "\$18.19",fontSize: 30,),
+                  ],
+                ),
+                Spacer(),
+               Custombutton(
+                ontap: () {},
+                text: 'Add To Cart',
+               )
+              ],
+            )
+
+
+
           
             ],
           ),

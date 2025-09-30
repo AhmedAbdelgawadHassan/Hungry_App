@@ -15,7 +15,7 @@ class UserHeader extends StatelessWidget {
                         Column(
                           children: [
                             SvgPicture.asset(
-                              'assets/logo/Hungry_.svg',
+                              'assets/logo/Hungry.svg',
                               color: AppColors.primaryColor,
                               height: 35,
                               width: 35,

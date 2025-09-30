@@ -5,6 +5,7 @@ import 'package:hungry/features/home/widgets/cardItem.dart';
 import 'package:hungry/features/home/widgets/category_food.dart';
 import 'package:hungry/features/home/widgets/searchField.dart';
 import 'package:hungry/features/home/widgets/user_header.dart';
+import 'package:hungry/features/product/views/product_details_view.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -34,38 +35,42 @@ class _HomeViewState extends State<HomeView> {
                     Gap(65),
                     UserHeader(),
                     Gap(30),
-                   Searchfield(),
+                    Searchfield(),
                     Gap(20),
                     CategoryFood(
                       categories: categories,
-                      seletedIndex: seletedIndex
+                      seletedIndex: seletedIndex,
                     ),
                     Gap(30),
                   ],
                 ),
               ),
-              SliverToBoxAdapter(
-                child: GridView.builder(
-                  padding: EdgeInsets.only(bottom: 20),
-                  physics: NeverScrollableScrollPhysics(),
-                  shrinkWrap: true,
-                  itemCount: 12,
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+             
+              SliverGrid(
+                delegate: SliverChildBuilderDelegate(childCount: 8,(context, index) => GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return ProductDetailsView();
+                            },
+                          ),
+                        );
+                      },
+                      child: Carditem(
+                        text: 'BurgerKing',
+                        descrption: 'Eahmed else imad',
+                        rating: '4.6',
+                        image: 'assets/test/image6.png',
+                      ),
+                    )),
+                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount:2 ,
                     mainAxisSpacing: 20,
                     crossAxisSpacing: 10,
                     childAspectRatio: 0.71,
-                    crossAxisCount: 2,
-                  ),
-                  itemBuilder: (context, index) {
-                    return Carditem(
-                      text: 'BurgerKing',
-                      descrption: 'Eahmed else imad',
-                      rating: '4.6',
-                      image: 'assets/image 6.png',
-                    );
-                  }
-                ),
-              ),
+                  ))
             ],
           ),
         ),

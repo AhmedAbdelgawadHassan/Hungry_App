@@ -36,7 +36,7 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
               value: v,
                onChanged: (value) {
                  setState(() {
-                  v=value;
+                v=value;
                   // print(v);
                  });
                },

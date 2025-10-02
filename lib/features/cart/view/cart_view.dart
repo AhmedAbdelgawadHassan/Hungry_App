@@ -13,28 +13,45 @@ class CartView extends StatefulWidget {
 }
 
 class _CartViewState extends State<CartView> {
-  int number=1;
+  //// to make each cartItem alone while + or - order 
+  int itemCount=20;
+  late List<int> quantities;
 
-  void onAdd()
+
+
+
+  void onAdd(index)    // تستقبل الانديكس 
   {
   setState(() {
-     number++;
+     quantities[index]++;
   });
   }
 
-  void onMinus()
+  void onMinus(index)
   {
     setState(() {
-     if(number>1)
+     if(quantities[index]>1)
      {
-      number--;
+      quantities[index]--;
      }
     });
   }
 
+
+@override
+  void initState() {
+    quantities=List.generate(itemCount,(_)=>1);
+    super.initState();
+  }
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+      ),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20,vertical: 10),
         child: Column(
@@ -42,18 +59,18 @@ class _CartViewState extends State<CartView> {
             Gap(40),
            Expanded(
              child: ListView.builder(
-              itemCount: 8,
+              itemCount: itemCount,
               itemBuilder: (context, index) {
                return  CartItem(
-                number:number,
+                number:quantities[index],
                 image: 'assets/test/image6.png',
                 text: 'Hamburger',
                 description: 'Veggie Burger',
                 onAdd: () {
-                  onAdd();   
+                  onAdd(index);   
                 },
                 onMinus: () {
-                  onMinus();
+                  onMinus(index);
                 },
                 onRemove: () {},
               );

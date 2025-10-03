@@ -67,7 +67,7 @@ bottomNavigationBar: Container(
     items: [
     BottomNavigationBarItem(icon: Icon(CupertinoIcons.home),label: 'Home'),
     BottomNavigationBarItem(icon: Icon(CupertinoIcons.cart),label: 'Cart'),
-    BottomNavigationBarItem(icon: Icon(Icons.local_restaurant_outlined),label: 'Orders'),
+    BottomNavigationBarItem(icon: Icon(Icons.local_restaurant_outlined),label: 'Order History'),
     BottomNavigationBarItem(icon: Icon(CupertinoIcons.profile_circled),label: 'Profile'),
   
   

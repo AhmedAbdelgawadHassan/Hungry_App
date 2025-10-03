@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:hungry/features/cart/widgets/cart_item.dart';
+import 'package:hungry/features/chechout/views/checkout_view.dart';
 import 'package:hungry/shared/customButton.dart';
 import 'package:hungry/shared/custom_text.dart';
 
@@ -87,7 +88,11 @@ class _CartViewState extends State<CartView> {
               ),
               Spacer(),
              Custombutton(
-              ontap: () {},
+              ontap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return CheckoutView();
+                },));
+              },
               text: 'Checkout',
              )
             ],

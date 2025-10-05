@@ -20,21 +20,20 @@ class CartItem extends StatelessWidget {
     return Card(
               color: Colors.white,
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 12,vertical: 10),
+                padding: const EdgeInsets.symmetric(horizontal: 25,vertical: 10),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Column(
                       children: [
-                        Image(image: AssetImage(image),height: 100,width: 110,),
+                        FittedBox(child: Image(image: AssetImage(image),height: 100,width: 110,)),
                         CustomText(text: text,fontSize: 16,),
                         CustomText(text: description,fontWeight: FontWeight.w500,fontSize: 13,),
                       ],
                     ),
                     Gap(50),
                    Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Row(
                         children: [

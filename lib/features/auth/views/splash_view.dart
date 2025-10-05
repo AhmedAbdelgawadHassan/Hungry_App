@@ -27,7 +27,7 @@ class _SplashViewState extends State<SplashView> {
       body: Column(
         children: [
           Spacer(flex: 2,),
-          Center(child: SvgPicture.asset('assets/logo/Hungry_.svg')),
+          Center(child: SvgPicture.asset('assets/logo/Hungry.svg')),
           Spacer(flex: 3,),
           Image(image: AssetImage('assets/splash/image 1.png'))
         ],

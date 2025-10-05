@@ -50,14 +50,11 @@ class _CartViewState extends State<CartView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-      ),
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+        padding: EdgeInsets.symmetric(horizontal: 20,vertical: 5),
         child: Column(
           children: [
-            Gap(40),
+            Gap(30),
            Expanded(
              child: ListView.builder(
               itemCount: itemCount,

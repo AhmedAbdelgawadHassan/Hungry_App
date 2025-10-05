@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hungry/root.dart';
+import 'package:hungry/features/auth/views/splash_view.dart';
 
 void main()
 {
@@ -16,7 +16,7 @@ class HungryApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white
       ),
-      home: Root(),
+      home: SplashView(),
     );
   }
 }

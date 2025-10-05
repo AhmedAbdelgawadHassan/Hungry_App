@@ -14,9 +14,8 @@ class _OrderhistoryViewState extends State<OrderhistoryView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: Colors.white),
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 15),
+        padding: EdgeInsets.only(top: 60,left: 20,right: 20),
         child: ListView.builder(
           itemCount: 4,
           padding: EdgeInsets.only(bottom: 120, top: 10),
@@ -47,7 +46,7 @@ class _OrderhistoryViewState extends State<OrderhistoryView> {
                       ],
                     ),
                     Gap(20),
-                    Custombutton(text: 'Order Again', ontap: (){},width: double.infinity,color: Colors.grey.shade400,)
+                    Custombutton(text: 'Order Again', ontap: (){},width:300,color: Colors.grey.shade400,)
                   ],
                 ),
               ),

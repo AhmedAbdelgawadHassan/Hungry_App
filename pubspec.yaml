@@ -66,7 +66,7 @@ flutter:
     - assets/test/
     - assets/splash/
     - assets/logo/
-    - assets/icons/dollar Background Removed 1.png
+    - assets/icons/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

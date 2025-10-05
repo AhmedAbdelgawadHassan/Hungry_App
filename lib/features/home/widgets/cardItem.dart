@@ -17,26 +17,28 @@ class Carditem extends StatelessWidget {
               color: Colors.white,
               shadowColor: Colors.grey.shade600,
               child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 5,horizontal: 17),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                  Center(child: Image(image: AssetImage(image),height: 150,)),
-                    Gap(10),
-                   CustomText(text:text,fontWeight: FontWeight.w600,fontSize: 16,color: Colors.black,),
-                   CustomText(text: descrption,fontSize: 14,color: Colors.grey.shade600,),
-                    Gap(10),
-                    Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Icon(CupertinoIcons.star_fill,color: Colors.amber,size: 18,),
-                        Gap(5),
-                        CustomText(text: rating,fontSize: 15,color: Colors.black,),
-                        Spacer(),
-                        Icon(CupertinoIcons.heart_fill,color: AppColors.primaryColor,)
-                      ],
-                    )
-                  ],
+                padding: const EdgeInsets.symmetric(vertical: 5,horizontal: 15),
+                child: Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                    Center(child: FittedBox(child: Image(image: AssetImage(image),height: 120,width: 120,))),
+                      Gap(10),
+                     FittedBox(child: CustomText(text:text,fontWeight: FontWeight.w600,fontSize: 16,color: Colors.black,maxLines: 1,overFlow: TextOverflow.ellipsis )),
+                     FittedBox(child: CustomText(text: descrption,fontSize: 15,color: Colors.grey.shade600,maxLines: 1,overFlow: TextOverflow.ellipsis ,)),
+                      Gap(10),
+                      Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Icon(CupertinoIcons.star_fill,color: Colors.amber,size: 18,),
+                          Gap(5),
+                          CustomText(text: rating,fontSize: 15,color: Colors.black,),
+                          Spacer(),
+                          Icon(CupertinoIcons.heart_fill,color: AppColors.primaryColor,)
+                        ],
+                      )
+                    ],
+                  ),
                 ),
               ),
              );

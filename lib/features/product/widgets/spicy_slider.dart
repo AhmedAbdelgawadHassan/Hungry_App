@@ -10,10 +10,9 @@ class SpicySlider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return             Row(
+    return    Row(
               children: [
-               
-                Image.asset('assets/test/pngwing 12 (1).png'),
+                Image.asset('assets/test/pngwing 12 (1).png',height: 150,width: 150,),
                 Spacer(),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -22,7 +21,6 @@ class SpicySlider extends StatelessWidget {
                     Gap(20),
                     CustomText(text: 'Spicy',fontSize: 16,),
                     Slider(
-                      
                       value: value, 
                       inactiveColor: Colors.grey.shade300,
                       activeColor: AppColors.primaryColor,
@@ -30,9 +28,9 @@ class SpicySlider extends StatelessWidget {
                     max: 300,min: 100,),
                     Row(
                       children: [
-                        // Text('🥶'),
-                        // Spacer(),
-                        // Text('🌶️')
+                        Text('🥶'),
+                        Gap(150),
+                        Text('🌶️')
                       ],
                     )
                     

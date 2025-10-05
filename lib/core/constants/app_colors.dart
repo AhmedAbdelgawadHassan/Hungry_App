@@ -2,5 +2,5 @@ import 'package:flutter/widgets.dart';
 
 class AppColors 
 {
-  static const Color primaryColor=Color(0xff08421D);
+  static const Color primaryColor=Color(0xff4E342E);
 }

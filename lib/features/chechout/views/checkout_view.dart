@@ -61,7 +61,7 @@ class _CheckoutViewState extends State<CheckoutView> {
                 borderRadius: BorderRadiusGeometry.circular(8)
               ),
               tileColor: Color(0xff3B2F2F),
-              leading: Image(image: AssetImage('assets/test/Group31.png'),width: 50,),
+              leading: Image(image: AssetImage('assets/icons/dollar Background Removed 1.png'),width: 50,),
               title: Text("Cash On Delivery",style: TextStyle(color: Colors.white),),
               trailing: Radio<String>(
                 activeColor: Colors.white,
@@ -87,8 +87,8 @@ class _CheckoutViewState extends State<CheckoutView> {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadiusGeometry.circular(8)
               ),
-              tileColor: Colors.blue.shade900,
-              leading: Image(image: AssetImage('assets/test/Group31.png'),width: 50,),
+              tileColor: const Color.fromARGB(255, 0, 65, 162),
+              leading: Image(image: AssetImage('assets/icons/image 13 (4).png',),width: 50,),
               title: Text("Debit card",style: TextStyle(color: Colors.white),),
               subtitle: Text('**** **** **** 0505',style: TextStyle(color: Colors.grey),),
                 trailing: Radio<String>(

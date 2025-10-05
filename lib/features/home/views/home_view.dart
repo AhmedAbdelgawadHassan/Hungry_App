@@ -62,15 +62,14 @@ class _HomeViewState extends State<HomeView> {
                         text: 'BurgerKing',
                         descrption: 'Eahmed else imad',
                         rating: '4.6',
-                        // image: 'assets/test/image6.png',
-                        image:''
+                        image: 'assets/test/image6.png',
                       ),
                     )),
                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount:2 ,
                     mainAxisSpacing: 20,
                     crossAxisSpacing: 10,
-                    childAspectRatio: 0.71,
+                    childAspectRatio: 0.73,
                   ))
             ],
           ),

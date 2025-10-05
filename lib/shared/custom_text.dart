@@ -14,6 +14,7 @@ class CustomText extends StatelessWidget {
     return  Text(
      text,
      maxLines: maxLines,
+     textScaler: TextScaler.linear(1),  // عشان ميحصلش مشكله لو حجم الخط كبر 
      style: TextStyle(
       fontWeight: fontWeight,
       color: color,

@@ -45,7 +45,6 @@ class _HomeViewState extends State<HomeView> {
                   ],
                 ),
               ),
-             
               SliverGrid(
                 delegate: SliverChildBuilderDelegate(childCount: 8,(context, index) => GestureDetector(
                       onTap: () {

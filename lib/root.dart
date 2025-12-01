@@ -1,3 +1,5 @@
+// ignore_for_file: sort_child_properties_last
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hungry/core/constants/app_colors.dart';
@@ -15,7 +17,7 @@ class Root extends StatefulWidget {
 
 
 class _RootState extends State<Root> {
-    late PageController controller ;
+  late PageController controller ;
   late List<Widget>screens;
   int currentscreen=0;
   @override
@@ -37,7 +39,7 @@ class _RootState extends State<Root> {
 body: PageView(
   controller: controller,
   children: screens,
-  physics: NeverScrollableScrollPhysics(),  //never scroll by 
+  physics: NeverScrollableScrollPhysics(),  //never scroll by Hand
 ),
 bottomNavigationBar: Container(
   decoration: BoxDecoration(
@@ -69,9 +71,6 @@ bottomNavigationBar: Container(
     BottomNavigationBarItem(icon: Icon(CupertinoIcons.cart),label: 'Cart'),
     BottomNavigationBarItem(icon: Icon(Icons.local_restaurant_outlined),label: 'Order History'),
     BottomNavigationBarItem(icon: Icon(CupertinoIcons.profile_circled),label: 'Profile'),
-  
-  
-  
   ]),
 ),
     );
